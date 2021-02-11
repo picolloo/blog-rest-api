@@ -2,8 +2,11 @@ version: '3.0'
 services:
   db:
     image: postgres:10
+    volumes:
+      - ./docker/docker-postgresql-multiple-databases:/docker-entrypoint-initdb.d
     ports:
       - '5432:5432'
     environment:
+      POSTGRES_MULTIPLE_DATABASES: test,development
       POSTGRES_PASSWORD: 'postgres'
       POSTGRES_DB: 'challenge'
