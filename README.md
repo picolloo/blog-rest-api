@@ -35,6 +35,10 @@
 - [ ] Readme update
 - [ ] API Documentation
 
+## Stories
+
+- I got some problems with sqlite3 running on linux so I've made a test database withing the same docker of the current database.
+
 ## Description
 
 **Challenge goal**: The purpose of this challenge is to give an overall understanding of a backend application. You’ll be implementing a simplified version of news provider API. The concepts that you’re going to apply are:
