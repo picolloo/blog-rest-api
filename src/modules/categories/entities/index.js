@@ -1,3 +1,4 @@
+import slugify from 'slugify';
 import { Model } from 'objection';
 
 class Category extends Model {
@@ -13,8 +14,14 @@ class Category extends Model {
       properties: {
         id: { type: 'integer' },
         name: { type: 'string' },
+        slug: { type: 'string' },
       },
     };
+  }
+
+  async $beforeInsert(queryContext) {
+    await super.$beforeInsert(queryContext);
+    this.slug = slugify(this.name);
   }
 }
 
