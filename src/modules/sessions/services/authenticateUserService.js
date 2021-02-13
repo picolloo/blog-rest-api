@@ -8,13 +8,13 @@ async function execute(email, password) {
   const user = await UserRepository.findByEmail(email);
 
   if (!user) {
-    throw Error('Invalid credential');
+    throw { statusCode: 400, message: 'Invalid credentials' };
   }
 
   const passwordMatch = await compare(password, user.password);
 
   if (!passwordMatch) {
-    throw Error('Invalid credential');
+    throw { statusCode: 400, message: 'Invalid credentials' };
   }
 
   const token = sign({}, JWT_SECRET, {
