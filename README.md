@@ -13,11 +13,11 @@
 - [ ] Logout
 - [x] Authors repository
 - [ ] Articles repository
-- [ ] Category repository
-- [ ] **Admin** Category Create
-- [ ] **Admin** Category Read
-- [ ] **Admin** Category Update
-- [ ] **Admin** Category Delete
+- [x] Category repository
+- [x] **Admin** Category Create
+- [x] **Admin** Category Read
+- [x] **Admin** Category Update
+- [x] **Admin** Category Delete
 - [x] **Admin** Authors Create
   - [x] File import
 - [x] **Admin** Authors Read
