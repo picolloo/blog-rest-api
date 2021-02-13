@@ -3,6 +3,7 @@ exports.up = async knex => {
     table.increments('id');
     table.string('name').notNullable();
     table.string('picture');
+    table.unique('name');
 
     table.timestamps(true, true);
   });
