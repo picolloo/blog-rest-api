@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 
-import AuthorsController from '../controllers/authorsController';
+import AuthorsController from '../controllers';
 import { EnsureUserAuthentication } from '../../../shared/middlewares';
 import uploadConfig from '../../../shared/utils/upload';
 
