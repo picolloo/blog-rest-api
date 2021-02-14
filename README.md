@@ -11,7 +11,6 @@
 - [x] Register
   - [x] Validate email
 - [x] Login
-- [ ] Logout
 - [x] Authors repository
 - [x] Articles repository
 - [x] Category repository
