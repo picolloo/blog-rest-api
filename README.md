@@ -32,7 +32,7 @@
 
 ####
 
-- [ ] Dockerfile
+- [x] Dockerfile
 - [ ] Readme update
 - [ ] API Documentation
 
