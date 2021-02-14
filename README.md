@@ -9,7 +9,7 @@
 - [x] Error handling
 - [x] Not found
 - [x] Register
-  - [ ] Validate email
+  - [x] Validate email
 - [x] Login
 - [ ] Logout
 - [x] Authors repository

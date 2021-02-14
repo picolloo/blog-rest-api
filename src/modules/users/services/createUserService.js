@@ -3,6 +3,10 @@ import bcrypt from 'bcryptjs';
 import UserRepository from '../repositories';
 
 async function execute(name, email, password) {
+  if (!emailIsValid(email)) {
+    throw { statusCode: 400, message: 'Invalid email' };
+  }
+
   const userExists = await UserRepository.findByEmail(email);
 
   if (userExists) {
@@ -14,6 +18,10 @@ async function execute(name, email, password) {
   const user = await UserRepository.create(name, email, hashedPassword);
 
   return user;
+}
+
+function emailIsValid(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export default {

@@ -1,3 +1,5 @@
 import App from './app';
 
-App.listen(process.env.PORT || '8080');
+import { PORT } from './config';
+
+App.listen(PORT);
