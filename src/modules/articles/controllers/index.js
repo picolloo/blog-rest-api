@@ -1,4 +1,7 @@
+import { GetArticleService } from '../services';
 import ArticlesRepository from '../repositories';
+
+import Auth from '../../../shared/utils/auth';
 
 async function create(request, response) {
   const { title, summary, content, category_id, author_id } = request.body;
@@ -26,13 +29,12 @@ async function index(request, response) {
 
 async function show(request, response) {
   const { id } = request.params;
-  const articles = await ArticlesRepository.findById(id);
 
-  if (!articles) {
-    throw { statusCode: 404, message: `Articles: ${id} not found.` };
-  }
+  const isAuthenticated = Auth.isAuthenticated(request);
 
-  return response.json(articles);
+  const article = await GetArticleService.execute(id, isAuthenticated);
+
+  return response.json(article);
 }
 
 async function update(request, response) {

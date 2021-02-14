@@ -9,10 +9,11 @@
 - [x] Error handling
 - [x] Not found
 - [x] Register
+  - [ ] Validate email
 - [x] Login
 - [ ] Logout
 - [x] Authors repository
-- [ ] Articles repository
+- [x] Articles repository
 - [x] Category repository
 - [x] **Admin** Category Create
 - [x] **Admin** Category Read
@@ -23,13 +24,12 @@
 - [x] **Admin** Authors Read
 - [x] **Admin** Authors Update
 - [x] **Admin** Authors Delete
-- [ ] **Admin** Articles Create
-- [ ] **Admin** Articles Read by ID
-- [ ] **Admin** Articles Read by category
-- [ ] **Admin** Articles Update
-- [ ] **Admin** Articles Delete
-- [ ] **Logged** Articles Read by ID
-- [ ] **Anonymous** Articles Read by ID
+- [x] **Admin** Articles Create
+- [x] **Admin** Articles Read by ID
+- [x] **Admin** Articles Read by category
+- [x] **Admin** Articles Update
+- [x] **Admin** Articles Delete
+- [x] **Anonymous** Articles Read by ID
 
 ####
 

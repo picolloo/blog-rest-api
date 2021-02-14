@@ -15,11 +15,7 @@ router.get(
   EnsureUserAuthentication,
   ArticlesController.index,
 );
-router.get(
-  '/admin/articles/:id',
-  EnsureUserAuthentication,
-  ArticlesController.show,
-);
+router.get('/articles/:id', ArticlesController.show);
 router.put(
   '/admin/articles/:id',
   EnsureUserAuthentication,
