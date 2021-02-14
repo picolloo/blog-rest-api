@@ -11,17 +11,26 @@ async function create(title, summary, content, category_id, author_id) {
 }
 
 async function findAll() {
-  return await Article.query();
+  return await Article.query()
+    .join('authors', 'authors.id', 'articles.author_id')
+    .join('categories', 'categories.id', 'articles.category_id')
+    .select('articles.*', 'authors.name', 'authors.picture', 'categories.name');
 }
 
 async function findById(id) {
-  return await Article.query().findById(id);
+  return await Article.query()
+    .findById(id)
+    .join('authors', 'authors.id', 'articles.author_id')
+    .join('categories', 'categories.id', 'articles.category_id')
+    .select('articles.*', 'authors.name', 'authors.picture', 'categories.name');
 }
 
 async function findByCategorySlug(slug) {
   return await Article.query()
-    .innerJoin('categories', 'categories.id', 'articles.category_id')
-    .where('categories.slug', slug);
+    .where('categories.slug', slug)
+    .join('authors', 'authors.id', 'articles.author_id')
+    .join('categories', 'categories.id', 'articles.category_id')
+    .select('articles.*', 'authors.name', 'authors.picture', 'categories.name');
 }
 
 async function deleteById(id) {
