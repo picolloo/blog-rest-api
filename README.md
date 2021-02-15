@@ -33,7 +33,8 @@
 ####
 
 - [x] Dockerfile
-- [ ] Readme update
+- [x] Readme update
+- [x] CI
 - [ ] API Documentation
 
 ## Description
