@@ -11,11 +11,10 @@
   },
   "scripts": {
     "dev": "cross-env nodemon -r esm --watch src src/index.js",
-    "start": "cross-env node -r esm src src/index.js",
+    "start": "cross-env NODE_ENV=production node -r esm src src/index.js",
     "db:migrate": "knex migrate:latest"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -23,6 +22,7 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
